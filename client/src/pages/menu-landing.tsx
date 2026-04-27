@@ -95,7 +95,7 @@ function CouponCard({
         className="flex rounded-2xl overflow-hidden relative"
         style={{
           border: "1.5px solid #E49B1D",
-          height: "120px",
+          height: "92px",
           boxShadow: "0 4px 20px rgba(228,155,29,0.18)",
         }}
       >
@@ -108,17 +108,13 @@ function CouponCard({
             borderRight: "1.5px dashed rgba(61,49,0,0.35)",
           }}
         >
-          <Tag
-            className="w-4 h-4 mb-1 flex-shrink-0"
-            style={{ color: "#3D3100", opacity: 0.8 }}
-          />
           <p
             className="font-black text-center"
             style={{
               color: "#3D3100",
               fontFamily: "'DM Sans', sans-serif",
               letterSpacing: "-0.5px",
-              fontSize: "clamp(13px, 3.6vw, 18px)",
+              fontSize: "clamp(12px, 3.4vw, 16px)",
               lineHeight: 1.05,
               display: "-webkit-box",
               WebkitLineClamp: 3,
@@ -130,7 +126,7 @@ function CouponCard({
             {coupon.title}
           </p>
           <p
-            className="text-[9px] uppercase tracking-widest mt-1 text-center font-semibold w-full"
+            className="text-[8px] uppercase tracking-widest mt-1 text-center font-semibold w-full"
             style={{
               color: "#3D3100",
               opacity: 0.75,
@@ -276,30 +272,26 @@ function CouponsFullScreen({
                   className="flex rounded-2xl overflow-hidden relative w-full"
                   style={{
                     border: "1.5px solid #E49B1D",
-                    height: "150px",
+                    height: "120px",
                     boxShadow: "0 4px 20px rgba(228,155,29,0.18)",
                   }}
                 >
                   {/* LEFT — gold gradient panel */}
                   <div
-                    className="flex flex-col items-center justify-center px-4 py-3 flex-shrink-0 overflow-hidden"
+                    className="flex flex-col items-center justify-center px-3 py-2 flex-shrink-0 overflow-hidden"
                     style={{
                       width: "36%",
                       background: "linear-gradient(135deg, #E49B1D, #E6C55A)",
                       borderRight: "1.5px dashed rgba(61,49,0,0.35)",
                     }}
                   >
-                    <Tag
-                      className="w-4 h-4 mb-1 flex-shrink-0"
-                      style={{ color: "#3D3100", opacity: 0.8 }}
-                    />
                     <p
                       className="font-black text-center"
                       style={{
                         color: "#3D3100",
                         fontFamily: "'DM Sans', sans-serif",
                         letterSpacing: "-0.5px",
-                        fontSize: "clamp(14px, 4vw, 20px)",
+                        fontSize: "clamp(13px, 3.6vw, 18px)",
                         lineHeight: 1.05,
                         display: "-webkit-box",
                         WebkitLineClamp: 3,
