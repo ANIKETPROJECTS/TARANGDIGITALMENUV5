@@ -205,8 +205,6 @@ export default function Welcome() {
             }
       }
     >
-      {/* Subtle fade over the background (light mode only) */}
-      {!isDark && <div className="absolute inset-0 pointer-events-none" style={{ background: "rgba(255,255,255,0.55)", zIndex: 0 }} />}
       <MediaPreloader onComplete={() => setMediaReady(true)} />
 
       {/* Theme toggle — fixed top left */}
