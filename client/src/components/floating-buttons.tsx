@@ -1,12 +1,10 @@
 import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
-import { apiRequest } from "@/lib/queryClient";
+import { useQuery } from "@tanstack/react-query";
 import { X, Star, ChefHat, Flame, Heart, Award, Sparkles, Zap, Coffee, Leaf, Trophy, ThumbsUp } from "lucide-react";
 import { useTheme } from "@/contexts/ThemeContext";
-import type { MenuItem, CallWaiter, SmartPicksCategory } from "@shared/schema";
+import type { MenuItem, SmartPicksCategory } from "@shared/schema";
 const chefsHatImg = "https://res.cloudinary.com/dui1jsojt/image/upload/v1777092682/tarang-assets/chefs-hat_1773556627617.png";
-const waiterImg = "https://res.cloudinary.com/dui1jsojt/image/upload/v1777093085/tarang-assets/waiter_1773555177013.png";
 import ProductCard from "@/components/product-card";
 import DishDetailModal from "@/components/dish-detail-modal";
 
@@ -30,7 +28,6 @@ const ICON_MAP: Record<string, React.ReactNode> = {
 
 export default function FloatingButtons({ isMenuOpen = false }: FloatingButtonsProps) {
   const { isDark } = useTheme();
-  const queryClient = useQueryClient();
   const [showSmartMenu, setShowSmartMenu] = useState(false);
   const [activeSmartSection, setActiveSmartSection] = useState<string>("");
   const [smartVegFilter, setSmartVegFilter] = useState<"all" | "veg" | "non-veg">("all");
@@ -43,16 +40,6 @@ export default function FloatingButtons({ isMenuOpen = false }: FloatingButtonsP
   });
 
   const activeTab = smartPicksTabs.find(t => t.key === activeSmartSection) ?? smartPicksTabs[0];
-
-  const { data: callWaiterData } = useQuery<CallWaiter>({ queryKey: ["/api/call-waiter"] });
-  const waiterCalled = callWaiterData?.called ?? false;
-
-  const callWaiterMutation = useMutation({
-    mutationFn: (called: boolean) => apiRequest("PATCH", "/api/call-waiter", { called }),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ["/api/call-waiter"] });
-    },
-  });
 
   const smartFilteredItems = useMemo(() => {
     if (!activeTab) return [];
@@ -272,80 +259,6 @@ export default function FloatingButtons({ isMenuOpen = false }: FloatingButtonsP
         </motion.button>
       )}
 
-      {/* ── Call Waiter ── */}
-      {!isMenuOpen && (
-      <div className="fixed bottom-6 right-4 z-40">
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={() => callWaiterMutation.mutate(!waiterCalled)}
-          className="flex items-center gap-2 pl-1 pr-4 py-1 rounded-full shadow-lg"
-          style={{
-            background: "#FFFFFF",
-            border: waiterCalled ? "1.5px solid rgba(74,222,128,0.6)" : "1.5px solid rgba(228,155,29,0.5)",
-            backdropFilter: "blur(10px)",
-            boxShadow: "0 4px 16px rgba(0,0,0,0.12)",
-          }}
-          data-testid="button-call-waiter"
-        >
-          <div
-            className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0"
-            style={{
-              border: waiterCalled ? "2px solid rgba(74,222,128,0.7)" : "2px solid rgba(228,155,29,0.7)",
-            }}
-          >
-            <img src={waiterImg} alt="Call Waiter" className="w-full h-full object-cover" />
-          </div>
-          <AnimatePresence mode="wait">
-            {waiterCalled ? (
-              <motion.div
-                key="called"
-                initial={{ opacity: 0, x: 6 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -6 }}
-                transition={{ duration: 0.18 }}
-                className="flex flex-col items-start"
-              >
-                <span
-                  className="text-[10px] font-semibold tracking-widest uppercase leading-tight"
-                  style={{ color: "#4ade80", fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  Waiter Called
-                </span>
-                <span
-                  className="text-[9px] tracking-wide"
-                  style={{ color: "rgba(74,222,128,0.6)", fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  Tap to dismiss
-                </span>
-              </motion.div>
-            ) : (
-              <motion.div
-                key="idle"
-                initial={{ opacity: 0, x: 6 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -6 }}
-                transition={{ duration: 0.18 }}
-                className="flex flex-col items-start"
-              >
-                <span
-                  className="text-[10px] font-semibold tracking-widest uppercase leading-tight"
-                  style={{ color: "var(--bb-gold)", fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  Call Waiter
-                </span>
-                <span
-                  className="text-[9px] tracking-wide"
-                  style={{ color: "rgba(228,155,29,0.6)", fontFamily: "'DM Sans', sans-serif" }}
-                >
-                  Tap to request
-                </span>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </motion.button>
-      </div>
-      )}
     </>
   );
 }
