@@ -1609,7 +1609,7 @@ export default function MenuLanding() {
                             lineHeight: 1.2,
                           }}
                         >
-                          BUY 1<br />GET 1
+                          BUY 1 GET 1 FREE
                         </span>
                       </div>
                     )}
