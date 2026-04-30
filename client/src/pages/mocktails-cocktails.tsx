@@ -96,12 +96,6 @@ export default function MocktailsCocktails() {
 
       <div className="container mx-auto px-3 sm:px-4 pt-6 pb-24">
         <div className="mb-6 text-center">
-          <p
-            className="text-[11px] uppercase tracking-[0.3em] font-light mb-1"
-            style={{ color: "var(--bb-gold)", fontFamily: "'DM Sans', sans-serif" }}
-          >
-            Choose a Section
-          </p>
           <h1
             className="text-2xl font-black uppercase tracking-widest"
             style={{ color: "var(--bb-gold)", fontFamily: "'Cormorant Garamond', serif" }}
