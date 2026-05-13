@@ -72,6 +72,66 @@ uri = "file://attached_assets/generated_images/cocktail_mercedes.png"
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "JRaZ7D3M5uaKc1hUjRe-G"
+uri = "file://attached_assets/generated_images/cocktail_mustang.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "1TkLNLZk0hLO6ly2HyAcX"
+uri = "file://attached_assets/generated_images/cocktail_pagani.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "Zwt-OPdnYzFbvkNoHq5bY"
+uri = "file://attached_assets/generated_images/cocktail_porsche.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "cjSR_xUweZEv4_bmCRF93"
+uri = "file://attached_assets/generated_images/cocktail_rolls_royce.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "6UkFMDvYc0NkrPU3RegA5"
+uri = "file://attached_assets/generated_images/mocktail_anoka.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "hgbg71lrNBuz215QXHXN4"
+uri = "file://attached_assets/generated_images/mocktail_choti_si_baat.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "p0qYQtXx3mZwhC91vrHn2"
+uri = "file://attached_assets/generated_images/mocktail_ek_hashina_thi.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "HyY4ljwVhFasrmhxKrpyE"
+uri = "file://attached_assets/generated_images/mocktail_farar.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "f4uWK8pY4C7J2ZkAbcZJd"
+uri = "file://attached_assets/generated_images/mocktail_half_ticket.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "8RZBUGcBQHkg14ynK2p_-"
+uri = "file://attached_assets/generated_images/mocktail_insaf.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "ovq0RaByASGvkvUoyjHU2"
 uri = "file://admin-dashboard-prompt.md"
@@ -83,3 +143,51 @@ id = "-86p6VVyEDc5U8P2Vztln"
 uri = "file://investor-demo-dashboard-prompt.md"
 type = "text"
 title = "Investor Demo Dashboard — Build Prompt"
+
+[[outputs]]
+id = "oirHsEI20A51seOC7oWZY"
+uri = "file://attached_assets/stock_images/mocktail_kahani.jpg"
+type = "image"
+title = "tropical pineapple strawberry vanilla ice cream mocktail drink"
+
+[[outputs]]
+id = "80Ze1R-tXaOR_OiMLkR90"
+uri = "file://attached_assets/stock_images/mocktail_khamosh.jpg"
+type = "image"
+title = "fresh strawberry berry red mocktail drink with ice"
+
+[[outputs]]
+id = "wCnU7AAs9KOeQyKewnNPb"
+uri = "file://attached_assets/stock_images/mocktail_khatha_mitha.jpg"
+type = "image"
+title = "spicy tangy indian jamun pineapple mocktail dark purple drink"
+
+[[outputs]]
+id = "6W2GGJWHBZLhJ6SXseQkF"
+uri = "file://attached_assets/stock_images/mocktail_kuch_kuch.jpg"
+type = "image"
+title = "mango mint refreshing tropical mocktail yellow green drink"
+
+[[outputs]]
+id = "vldlG9yxQiIKAz0h2fmua"
+uri = "file://attached_assets/stock_images/mocktail_majito_madness.jpg"
+type = "image"
+title = "colorful rainbow mixed fruit mocktail drink"
+
+[[outputs]]
+id = "midkMuFM6m__N4V7-6Low"
+uri = "file://attached_assets/stock_images/mocktail_pushpa.jpg"
+type = "image"
+title = "blood orange basil energy mocktail red orange drink"
+
+[[outputs]]
+id = "qLJWk2wIEIxEM4uW6tss3"
+uri = "file://attached_assets/stock_images/mocktail_sil_sila.jpg"
+type = "image"
+title = "pomegranate cranberry ruby red mocktail drink"
+
+[[outputs]]
+id = "L9ocl8Y8dIBY9nvhfzJRz"
+uri = "file://attached_assets/stock_images/mocktail_teesri_manzil.jpg"
+type = "image"
+title = "blue litchi vanilla ice cream dessert mocktail blue white drink"
