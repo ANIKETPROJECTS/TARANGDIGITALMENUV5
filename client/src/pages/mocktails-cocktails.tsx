@@ -91,22 +91,6 @@ export default function MocktailsCocktails() {
       </header>
 
       <div className="container mx-auto px-3 sm:px-4 pt-6 pb-24">
-        {/* Page heading */}
-        <div className="text-center mb-6">
-          <p
-            className="text-[10px] uppercase tracking-[0.35em] font-light mb-1"
-            style={{ color: "var(--bb-gold)", opacity: 0.75 }}
-          >
-            Exclusive Offer
-          </p>
-          <h1
-            className="text-2xl font-black uppercase tracking-widest"
-            style={{ color: "var(--bb-gold)", fontFamily: "'Cormorant Garamond', serif" }}
-          >
-            Buy 1 Get 1 Free
-          </h1>
-        </div>
-
         {/* Two offer tiles */}
         <div className="grid grid-cols-2 gap-3">
           {offerTiles.map((tile, index) => {
@@ -146,16 +130,19 @@ export default function MocktailsCocktails() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
 
-                  {/* BUY 1 GET 1 FREE badge at top */}
-                  <div className="absolute top-2 left-0 right-0 flex justify-center">
+                  {/* Red ribbon - same as home page */}
+                  <div className="absolute top-3 left-0">
                     <span
-                      className="px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-widest"
+                      className="block text-[11px] font-black uppercase tracking-wider pl-3 pr-5 py-1.5"
                       style={{
-                        background: "rgba(228,155,29,0.92)",
-                        color: "#1C1500",
+                        background: "#DC2626",
+                        color: "#FFFFFF",
+                        clipPath: "polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%)",
+                        boxShadow: "2px 2px 6px rgba(0,0,0,0.4)",
+                        lineHeight: 1.2,
                       }}
                     >
-                      Buy 1 Get 1 Free
+                      BUY 1 GET 1 FREE
                     </span>
                   </div>
 
@@ -171,12 +158,6 @@ export default function MocktailsCocktails() {
                     >
                       {tile.label}
                     </h3>
-                    <p
-                      className="text-xs font-semibold mt-0.5"
-                      style={{ color: "var(--bb-gold)", textShadow: "0 1px 4px rgba(0,0,0,0.9)" }}
-                    >
-                      {tile.tag}
-                    </p>
                   </div>
                 </button>
               </motion.div>
