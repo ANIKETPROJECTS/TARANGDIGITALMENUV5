@@ -226,6 +226,7 @@ subcategoryImages["jalpari-special"] = jalpariSpecialImg;
 subcategoryImages["sabzi-tarkari"] = sabziTarkariImg;
 
 subcategoryImages["cocktails"] = barCocktailsImg;
+subcategoryImages["mocktails-drinks"] = "https://res.cloudinary.com/dui1jsojt/image/upload/v1778700646/tarang-assets/bar_mocktails_drinks_1778700644359.png";
 subcategoryImages["shots"] = tequilaImg;
 subcategoryImages["beer"] = barBeerImg;
 subcategoryImages["alcopops"] = liqueursImg;
