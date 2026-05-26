@@ -47,7 +47,7 @@ const partyPlans = [
     inclusions: [
       "2 Welcome Drinks",
       "2 Veg Starters",
-      "2 Main Course",
+      "1 Main Course",
       "2 Rotis · 2 Rice",
       "1 Dal · 1 Raita",
       "1 Ice Cream · 1 Sweet",
@@ -62,7 +62,7 @@ const partyPlans = [
     color: "#E49B1D",
     inclusions: [
       "2 Welcome Drinks",
-      "3 Veg Starters",
+      "2 Veg Starters",
       "2 Main Course",
       "2 Rotis · 2 Rice",
       "1 Dal · 1 Raita",
@@ -147,7 +147,7 @@ const nonVegMenuSections = [
   { icon: Drumstick, title: "Starters – Non-Veg", items: ["Chicken Hot Basil", "Chicken Pahadi Tikka", "Chicken Tikka", "Chicken Crispy", "Chicken Burnt Garlic Dry", "Chicken Manchurian Dry", "Chicken Perry Dry", "Chicken Koliwada"] },
   { icon: Beef, title: "Main Course – Chicken", items: ["Chicken Maratha", "Chicken Handi", "Chicken Tikka Masala", "Chicken Rara", "Chicken Lahori", "Chicken Kadai", "Butter Chicken", "Chicken Kolhapuri", "Chicken Manchurian Gravy", "Chicken Masala"] },
   { icon: Beef, title: "Main Course – Mutton (Premium)", items: ["Mutton Masala", "Mutton Handi"] },
-  { icon: Beef, title: "Extra Dishes (Seasonal)", items: ["Mutton", "Prawns", "Surmai", "Basa / Rawas"] },
+  { icon: Beef, title: "Extra Dishes (Seasonal)", items: ["Mutton", "Prawns", "Basa / Rawas"] },
 ];
 
 const planComparison = [
